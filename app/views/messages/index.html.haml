@@ -1,0 +1,44 @@
+.flash-box
+
+.wrapper
+  .chat-side
+    .side-header
+      %p.side-header__user-name Foo Bar
+      %ul.user-menu
+        %li.user-menu__edit-user
+          = link_to "#" do
+            = fa_icon 'pencil-square-o', class: 'icon'
+        %li.user-menu__new-group
+          = link_to "#" do
+            = fa_icon 'cog', class: 'icon'
+    .groups
+      .group
+        = link_to "#" do
+          .group__name
+            Hoge
+          .group__message
+            まだメッセージがありません
+  .chat-main
+    .main-header
+      .current_group
+        %h2.current_group__name Hoge
+        %ul.member-list
+          Member:
+          %li.member-list__member Foo Bar
+      = link_to "#" do
+        .main-header__edit-btn Edit
+    .messages
+    .form
+      %form.new-message
+        -#= form_for [@group, @message] do |f|
+        -#  = f.text_field :content, class: 'input-box', placeholder: 'type a message'
+        -#  .form_mask
+        -#    = f.label :image, class: 'form__mask__image' do
+        -#      = fa_icon 'picture-o', class: 'icon'
+        -#      = f.file_field :image, class: 'hidden'
+        -#  = f.submit 'Send', class: 'submit-btn'
+        .input-box
+          %input.input-box__text{ placeholder: "type a message", type: "text", name: "message[content]" }
+          %label.image-label
+            %i.fa.fa-image
+        %input.submit-btn{ type: "submit", value: "Send" }
