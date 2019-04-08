@@ -1,6 +1,9 @@
 @import './reset';
 @import 'font-awesome';
+@import 'config/colors';
 @import 'moduls/user';
+@import 'moduls/flash';
+
 
 * {
   box-sizing: border-box;
@@ -11,11 +14,11 @@ a {
   cursor: pointer;
 }
 
-.flash-box {
-  width: 100vw;
-  height: 15px;
-  background-color: #38AEF0;
-}
+//.flash-box {
+//  width: 100vw;
+//  height: 15px;
+//  background-color: #38AEF0;
+//}
 
 .chat-side {
   width: 300px;
