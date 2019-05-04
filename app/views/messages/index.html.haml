@@ -12,16 +12,16 @@
         .main-header__edit-btn Edit
     .messages
     .form
-      %form.new-message
-        -#= form_for [@group, @message] do |f|
-        -#  = f.text_field :content, class: 'input-box', placeholder: 'type a message'
-        -#  .form_mask
-        -#    = f.label :image, class: 'form__mask__image' do
-        -#      = fa_icon 'picture-o', class: 'icon'
-        -#      = f.file_field :image, class: 'hidden'
-        -#  = f.submit 'Send', class: 'submit-btn'
-        .input-box
-          %input.input-box__text{ placeholder: "type a message", type: "text", name: "message[content]" }
-          %label.image-label
-            %i.fa.fa-image
-        %input.submit-btn{ type: "submit", value: "Send" }
+      -#%form.new-message
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'input-box', placeholder: 'type a message'
+        .form_mask
+          = f.label :image, class: 'form__mask__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'submit-btn'
+        -#.input-box
+        -#  %input.input-box__text{ placeholder: "type a message", type: "text", name: "message[content]" }
+        -#  %label.image-label
+        -#    %i.fa.fa-image
+        -#%input.submit-btn{ type: "submit", value: "Send" }
