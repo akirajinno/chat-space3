@@ -11,14 +11,14 @@
       = link_to "#" do #edit_group_path(@group)
         .main-header__edit-btn Edit
     .messages
+      = render @messages
     .form
-      -#%form.new-message
       = form_for [@group, @message] do |f|
         = f.text_field :content, class: 'input-box', placeholder: 'type a message'
-        .form_mask
+        .form__mask
           = f.label :image, class: 'form__mask__image' do
             = fa_icon 'picture-o', class: 'icon'
-            = f.file_field :image, class: 'hidden'
+            =f.file_field :image, class: 'hidden'
         = f.submit 'Send', class: 'submit-btn'
         -#.input-box
         -#  %input.input-box__text{ placeholder: "type a message", type: "text", name: "message[content]" }

@@ -17,5 +17,6 @@
 .byebug_history
 
 public/update/*
+public/uploads/*
 
 .idea/
