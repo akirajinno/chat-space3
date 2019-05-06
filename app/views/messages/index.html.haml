@@ -4,10 +4,12 @@
   .chat-main
     .main-header
       .current_group
-        %h2.current_group__name Hoge
+        %h2.current_group__name
+          = @group.name
         %ul.member-list
           Member:
-          %li.member-list__member Foo Bar
+          %li.member-list__member
+            = current_user.name
       = link_to "#" do #edit_group_path(@group)
         .main-header__edit-btn Edit
     .messages
