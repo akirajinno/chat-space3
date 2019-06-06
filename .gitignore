@@ -16,7 +16,8 @@
 # Ignore Byebug command history file.
 .byebug_history
 
-public/update/*
-public/uploads/*
+# public/update/*
+# public/uploads/*
 
+config/secrets.yml
 .idea/
