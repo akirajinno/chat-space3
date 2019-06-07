@@ -43,7 +43,7 @@ set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', '
 set :rbenv_type, :user
 set :rbenv_ruby, '2.3.1'
 
-set :ssh_options, auth_methods: ['publickey'], keys: ['~/.ssh/id_rsa.pub'] #key2ecper.pem
+set :ssh_options, auth_methods: ['publickey'], keys: ['/home/ec2-user/.ssh/authorized_keys'] #'~/.ssh/key2ecper.pem'
 
 set :unicorn_pid, -> { "#{shared_path}/tmp/pids/unicorn.pid" }
 set :unicorn_config_path, -> { "#{current_path}/config/unicorn.rb" }
